@@ -1,17 +1,50 @@
 DeepSec: Hybrid AI-Powered Security Auditor
 DeepSec is an advanced security auditing platform that combines Static Application Security Testing (SAST) with the reasoning power of Llama 3.3 (Large Language Models). It is designed to scan local source code and GitHub repositories to identify vulnerabilities listed in the OWASP Top 10:2025.
 
-Features at a Glance
+##  Features at a Glance
+
+| Feature | Description |
+| :--- | :--- |
+| **Hybrid Analysis** | Combines fast Regex patterns with Deep AI reasoning. |
+| **GitHub Integration** | Automatically clones and audits remote repositories. |
+| **Multilingual** | Full support for **English**, **Русский**, and **O'zbek**. |
+| **PoC Generation** | AI generates Proof-of-Concept exploits for confirmed bugs. |
+| **Smart Reporting** | Generates interactive HTML reports with remediation steps. |
 ```bash
-Feature	Description
-Hybrid Analysis	Combines fast Regex patterns with Deep AI reasoning.
-GitHub Integration	Automatically clones and audits remote repositories.
-Multilingual	Full support for English, Русский, and O'zbek.
-PoC Generation	AI generates Proof-of-Concept exploits for confirmed bugs.
-Smart Reporting	Generates interactive HTML reports with remediation step
+
 ```
+GitHub README fayli uchun ushbu qismni yanada tushunarli va tayyor buyruqlar (copy-paste) bilan boyitilgan holda tayyorladim. Bu foydalanuvchiga terminaldan chiqmasdan sozlash imkonini beradi.
+
+🔑 How to Get and Configure your API Key
+To enable the AI-powered audit (Llama 3.3), you must obtain a free API key from Groq Cloud. Follow these steps:
+
+1. Obtain the Key
+Visit the Groq Cloud Console.
+
+Sign up or Log in using your account.
+
+On the left sidebar, navigate to "API Keys".
+
+Click the "Create API Key" button.
+
+Give it a descriptive name (e.g., DeepSec-Auditor).
+
+Copy the generated key immediately (it won't be shown again).
+
+2. Configure via Terminal
+You can quickly set up your environment by running one of the following commands in your project root:
 
 
+
+
+
+# Create a .env file and add your key
+```bash
+echo 'GROQ_API_KEY="your_api_key_here"' > .env
+# Verify the file was created
+
+cat .env
+```
 
 
 
