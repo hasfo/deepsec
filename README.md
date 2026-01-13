@@ -1,9 +1,9 @@
-# 🛡️ DeepSec: AI-Powered Security Auditor
+#  DeepSec: AI-Powered Security Auditor
 
 DeepSec is a high-performance security auditing platform that combines **Static Application Security Testing (SAST)** with the reasoning power of **Llama 3.3 (AI)**.
 
 ---
-## 📋 System Requirements
+##  System Requirements
 
 Ensure your environment meets these minimum specifications:
 
@@ -126,7 +126,7 @@ python deepsec-l1.py
 
 
 
-## 📜 License
+##  License
 
 This project is licensed under the **MIT License**. This means you are free to use, modify, and distribute the software, provided that the original copyright notice and permission notice are included. 
 
@@ -134,7 +134,7 @@ See the [LICENSE](LICENSE) file for the full legal text.
 
 ---
 
-## 🛡️ Responsible Disclosure
+##  Responsible Disclosure
 If you find a security bug in this tool itself, please open an issue or contact the developer. This tool is intended for **Ethical Security Auditing** and **Educational Purposes** only.
 
 ---
