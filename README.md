@@ -17,7 +17,7 @@ GitHub README fayli uchun ushbu qismni yanada tushunarli va tayyor buyruqlar (co
 
 🔑 How to Get and Configure your API Key
 To enable the AI-powered audit (Llama 3.3), you must obtain a free API key from Groq Cloud. Follow these steps:
-
+<img src="./searchapi.png" alt="Audit Report" width="600"/>
 1. Obtain the Key
 Visit the Groq Cloud Console.
 
@@ -27,7 +27,13 @@ On the left sidebar, navigate to "API Keys".
 
 Click the "Create API Key" button.
 
+<img src="./addapi.png" alt="Audit Report" width="600"/>
+
+
 Give it a descriptive name (e.g., DeepSec-Auditor).
+
+<img src="./addapikey.png" alt="Audit Report" width="600"/>
+
 
 Copy the generated key immediately (it won't be shown again).
 
@@ -46,198 +52,100 @@ echo 'GROQ_API_KEY="your_api_key_here"' > .env
 cat .env
 ```
 
+## 🛠️ Installation & Setup
 
-
-
-### Custom Modules
-
-```bash
-# List available modules
-./physical.sh --list-modules
-
-# Load custom module
-./physical.sh --load-module tools/custom_module.py
-
-# Run with specific tools
-./physical.sh --tools "recon,enum,extract"
-```
-
-### Output Options
+Follow these terminal commands to prepare your environment:
 
 ```bash
-# Save results to file
-./physical.sh --output results.txt
+# 1. Clone the repository
+git clone [https://github.com/TheDeepopc/deepsec.git](https://github.com/TheDeepopc/deepsec.git)
+cd deepsec
 
-# JSON format
-./physical.sh --format json --output results.json
+# 2. Set up a Virtual Environment
+python3 -m venv venv
 
-# Verbose mode
-./physical.sh --verbose
+# 3. Activate the Environment
 
-# Silent mode (logs only)
-./physical.sh --silent --log-file operation.log
+source venv/bin/activate
+
+# 4. Install Dependencies
+pip install -r requirements.txt # if not works use command with --break-system-packages
+
+# 5. Install Dependencies
+python deepsec-l1.py
 ```
 
 
+# 🛡️ DeepSec: AI-Powered Security Auditor
 
-### Module Structure
+DeepSec is a high-performance security auditing platform that combines **Static Application Security Testing (SAST)** with the reasoning power of **Llama 3.3 (AI)**.
 
-Each module follows a standardized structure:
+---
+## 📋 System Requirements
 
-```python
-class CustomModule:
-    def __init__(self):
-        self.name = "Module Name"
-        self.version = "1.0"
-        self.author = "Your Name"
-    
-    def run(self, args):
-        # Module logic here
-        pass
-    
-    def cleanup(self):
-        # Cleanup operations
-        pass
-```
+Ensure your environment meets these minimum specifications:
 
-## Configuration
-
-### Basic Configuration
-
-Edit `settings/config.conf`:
-
-```ini
-[General]
-debug_mode = false
-log_level = INFO
-output_dir = ./output
-
-[PDF-Robber]
-extract_embedded = true
-analyze_javascript = true
-max_file_size = 50MB
-
-[Network]
-timeout = 30
-retry_attempts = 3
-user_agent = Custom-Agent/1.0
-```
-
-### Environment Variables
-
-```bash
-export BUTCHER_HOME=/path/to/butcher
-export BUTCHER_CONFIG=/path/to/config.conf
-export BUTCHER_LOG_LEVEL=DEBUG
-```
-
-## Available Modules
-
-| Module | Description | Status |
-|--------|-------------|--------|
-| pdf-robber | PDF analysis and extraction | Active |
-| network-recon | Network reconnaissance | Active |
-| system-enum | System enumeration | Active |
-| data-extract | Data extraction utilities | Active |
-| payload-gen | Payload generator | Beta |
-
-## Contributing
-
-Contributions are welcome! Please follow these guidelines:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/AmazingFeature`
-3. Commit your changes: `git commit -m 'Add some AmazingFeature'`
-4. Push to the branch: `git push origin feature/AmazingFeature`
-5. Open a Pull Request
-
-### Code Standards
-
-- Follow PEP 8 for Python code
-- Use shellcheck for bash scripts
-- Add comments for complex logic
-- Update documentation
-- Test thoroughly before submitting
-
-## Troubleshooting
-
-### Common Issues
-
-**Setup script fails:**
-```bash
-chmod +x setup.sh
-sudo ./setup.sh
-```
-
-**Module not found:**
-```bash
-./physical.sh --list-modules
-pip install -r requirements.txt
-```
-
-**Permission denied:**
-```bash
-# For authorized testing only!
-sudo ./physical.sh
-```
-
-## Project Status
-
-- Core framework: Complete
-- PDF Robber module: Active
-- Cross-platform support: Stable
-- Additional modules: In development
-- Documentation: Ongoing updates
-
-## Security Notice
-
-This tool is intended for:
-- Authorized penetration testing
-- Security research in controlled environments
-- Educational purposes in cybersecurity training
-- Vulnerability assessment with permission
-
-### Legal Compliance
-
-- Always obtain written authorization before testing
-- Comply with local and international laws
-- Follow responsible disclosure practices
-- Respect privacy and confidentiality
-- Document all activities for audit purposes
-
-## License
-
-This project is licensed for Educational Purposes Only.
-
-```
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR
-ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE USE OF
-THE SOFTWARE.
-```
-
-## Author
-
-**TheDeepOpc**
-
-- GitHub: @TheDeepOpc
-- Repository: https://github.com/TheDeepOpc/butcher
-
-## Support
-
-- Issues: https://github.com/TheDeepOpc/butcher/issues
-- Discussions: https://github.com/TheDeepOpc/butcher/discussions
-- Wiki: https://github.com/TheDeepOpc/butcher/wiki
-
-## Acknowledgments
-
-- Security research community
-- Open-source contributors
-- Penetration testing frameworks
-- Educational institutions supporting cybersecurity research
+| Component | Requirement |
+| :--- | :--- |
+| **Operating System** | Linux (Ubuntu/Kali), macOS, or Windows (WSL recommended) |
+| **Python Version** | Python 3.9 or higher |
+| **Tools** | Git (for cloning repositories) |
+| **Connectivity** | Internet access (only for AI analysis via Groq API) |
 
 ---
 
-**Remember: With great power comes great responsibility. Use this tool ethically and legally.**
+
+
+
+##  Vulnerability Coverage Matrix 
+
+The engine is specifically tuned to detect the following security risks as defined by the latest OWASP standards:
+
+| Category | Description | Detected Patterns |
+| :--- | :--- | :--- |
+| **A01:2025** | **Broken Access Control** | Unauthorized header redirects, session role manipulation, IDOR patterns. |
+| **A02:2025** | **Security Misconfiguration** | Enabled debug modes (PHP/Django/Flask), hardcoded secrets, exposed .env files. |
+| **A05:2025** | **Injection** | Remote Code Execution (RCE), SQL Injection, LFI, Path Traversal, and XSS. |
+| **A08:2025** | **Software & Data Integrity Failures** | Unsafe Deserialization in Python (Pickle/Marshal), PHP, and Java. |
+| **A10:2025** | **Mishandling Exceptions** | Information disclosure through system stack traces and verbose error messages (die/exit). |
+
+
+---
+
+## 🛠️ Supported Languages & Ecosystems
+
+DeepSec is designed to handle a diverse range of programming environments. The engine automatically detects the language and applies specific security rulesets.
+
+| Language | Extension | Security Analysis Coverage |
+| :--- | :--- | :--- |
+| **PHP** | `.php` | RCE, SQLi, LFI, XSS, and Session Security. |
+| **Python** | `.py` | Insecure Deserialization, Subprocess RCE, and OS Injection. |
+| **JavaScript** | `.js` | Client-side XSS, Prototype Pollution, and Node.js security. |
+| **Java** | `.java` | XXE, ObjectInputStream vulnerabilities, and Spring flaws. |
+| **Go** | `.go` | Command Injection and Unsafe pointer usage. |
+| **C#** | `.cs` | ASP.NET security configurations and ActiveRecord SQLi. |
+| **Rust** | `.rs` | Memory safety checks and Unsafe block auditing. |
+| **Ruby** | `.rb` | Rails-specific vulnerabilities and YAML deserialization. |
+
+
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**. This means you are free to use, modify, and distribute the software, provided that the original copyright notice and permission notice are included. 
+
+See the [LICENSE](LICENSE) file for the full legal text.
+
+---
+
+## 🛡️ Responsible Disclosure
+If you find a security bug in this tool itself, please open an issue or contact the developer. This tool is intended for **Ethical Security Auditing** and **Educational Purposes** only.
+
+---
+
+### Developed with Precision by **[TheDeepOpc](https://thedeep.uz)**
+
+
+
+
