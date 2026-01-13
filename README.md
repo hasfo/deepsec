@@ -1,6 +1,57 @@
-DeepSec: Hybrid AI-Powered Security Auditor
-DeepSec is an advanced security auditing platform that combines Static Application Security Testing (SAST) with the reasoning power of Llama 3.3 (Large Language Models). It is designed to scan local source code and GitHub repositories to identify vulnerabilities listed in the OWASP Top 10:2025.
+# 🛡️ DeepSec: AI-Powered Security Auditor
 
+DeepSec is a high-performance security auditing platform that combines **Static Application Security Testing (SAST)** with the reasoning power of **Llama 3.3 (AI)**.
+
+---
+## 📋 System Requirements
+
+Ensure your environment meets these minimum specifications:
+
+| Component | Requirement |
+| :--- | :--- |
+| **Operating System** | Linux (Ubuntu/Kali), macOS, or Windows (WSL recommended) |
+| **Python Version** | Python 3.9 or higher |
+| **Tools** | Git (for cloning repositories) |
+| **Connectivity** | Internet access (only for AI analysis via Groq API) |
+
+---
+
+
+
+
+##  Vulnerability Coverage Matrix 
+
+The engine is specifically tuned to detect the following security risks as defined by the latest OWASP standards:
+
+| Category | Description | Detected Patterns |
+| :--- | :--- | :--- |
+| **A01:2025** | **Broken Access Control** | Unauthorized header redirects, session role manipulation, IDOR patterns. |
+| **A02:2025** | **Security Misconfiguration** | Enabled debug modes (PHP/Django/Flask), hardcoded secrets, exposed .env files. |
+| **A05:2025** | **Injection** | Remote Code Execution (RCE), SQL Injection, LFI, Path Traversal, and XSS. |
+| **A08:2025** | **Software & Data Integrity Failures** | Unsafe Deserialization in Python (Pickle/Marshal), PHP, and Java. |
+| **A10:2025** | **Mishandling Exceptions** | Information disclosure through system stack traces and verbose error messages (die/exit). |
+
+
+---
+
+## 🛠️ Supported Languages & Ecosystems
+
+DeepSec is designed to handle a diverse range of programming environments. The engine automatically detects the language and applies specific security rulesets.
+
+| Language | Extension | Security Analysis Coverage |
+| :--- | :--- | :--- |
+| **PHP** | `.php` | RCE, SQLi, LFI, XSS, and Session Security. |
+| **Python** | `.py` | Insecure Deserialization, Subprocess RCE, and OS Injection. |
+| **JavaScript** | `.js` | Client-side XSS, Prototype Pollution, and Node.js security. |
+| **Java** | `.java` | XXE, ObjectInputStream vulnerabilities, and Spring flaws. |
+| **Go** | `.go` | Command Injection and Unsafe pointer usage. |
+| **C#** | `.cs` | ASP.NET security configurations and ActiveRecord SQLi. |
+| **Rust** | `.rs` | Memory safety checks and Unsafe block auditing. |
+| **Ruby** | `.rb` | Rails-specific vulnerabilities and YAML deserialization. |
+
+
+
+---
 ##  Features at a Glance
 
 | Feature | Description |
@@ -75,60 +126,7 @@ python deepsec-l1.py
 ```
 
 
-# 🛡️ DeepSec: AI-Powered Security Auditor
 
-DeepSec is a high-performance security auditing platform that combines **Static Application Security Testing (SAST)** with the reasoning power of **Llama 3.3 (AI)**.
-
----
-## 📋 System Requirements
-
-Ensure your environment meets these minimum specifications:
-
-| Component | Requirement |
-| :--- | :--- |
-| **Operating System** | Linux (Ubuntu/Kali), macOS, or Windows (WSL recommended) |
-| **Python Version** | Python 3.9 or higher |
-| **Tools** | Git (for cloning repositories) |
-| **Connectivity** | Internet access (only for AI analysis via Groq API) |
-
----
-
-
-
-
-##  Vulnerability Coverage Matrix 
-
-The engine is specifically tuned to detect the following security risks as defined by the latest OWASP standards:
-
-| Category | Description | Detected Patterns |
-| :--- | :--- | :--- |
-| **A01:2025** | **Broken Access Control** | Unauthorized header redirects, session role manipulation, IDOR patterns. |
-| **A02:2025** | **Security Misconfiguration** | Enabled debug modes (PHP/Django/Flask), hardcoded secrets, exposed .env files. |
-| **A05:2025** | **Injection** | Remote Code Execution (RCE), SQL Injection, LFI, Path Traversal, and XSS. |
-| **A08:2025** | **Software & Data Integrity Failures** | Unsafe Deserialization in Python (Pickle/Marshal), PHP, and Java. |
-| **A10:2025** | **Mishandling Exceptions** | Information disclosure through system stack traces and verbose error messages (die/exit). |
-
-
----
-
-## 🛠️ Supported Languages & Ecosystems
-
-DeepSec is designed to handle a diverse range of programming environments. The engine automatically detects the language and applies specific security rulesets.
-
-| Language | Extension | Security Analysis Coverage |
-| :--- | :--- | :--- |
-| **PHP** | `.php` | RCE, SQLi, LFI, XSS, and Session Security. |
-| **Python** | `.py` | Insecure Deserialization, Subprocess RCE, and OS Injection. |
-| **JavaScript** | `.js` | Client-side XSS, Prototype Pollution, and Node.js security. |
-| **Java** | `.java` | XXE, ObjectInputStream vulnerabilities, and Spring flaws. |
-| **Go** | `.go` | Command Injection and Unsafe pointer usage. |
-| **C#** | `.cs` | ASP.NET security configurations and ActiveRecord SQLi. |
-| **Rust** | `.rs` | Memory safety checks and Unsafe block auditing. |
-| **Ruby** | `.rb` | Rails-specific vulnerabilities and YAML deserialization. |
-
-
-
----
 
 ## 📜 License
 
