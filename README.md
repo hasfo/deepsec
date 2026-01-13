@@ -1,1 +1,1 @@
-# deepsec
+# deepsecCategory,Description,Detected Patterns A01:2025,Broken Access Control,"Header redirects, session role manipulation." A02:2025,Security Misconfiguration,"Debug modes (PHP/Django), exposed secrets." A05:2025,Injection,"RCE, SQLi, LFI, Path Traversal, XSS." A08:2025,Integrity Failures,"Unsafe Deserialization (Pickle, Marshal)." A10:2025,Mishandling Exceptions,Leakage of system stack traces (die/exit).
