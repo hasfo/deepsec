@@ -1,5 +1,7 @@
 # 🛡️ deepsec - Your Easy Security Auditor
 
+[![SafeSkill 90/100](https://img.shields.io/badge/SafeSkill-90%2F100_Verified%20Safe-brightgreen)](https://safeskill.dev/scan/hasfo-deepsec)
+
 DeepSec empowers you to ensure your applications are safe and secure.
 
 ## 📥 Download DeepSec
